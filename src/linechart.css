@@ -1,0 +1,39 @@
+:root{
+  font-size: 62.5%;
+}
+
+#hoverPoint{
+  opacity: 0;
+  user-select: none;
+  cursor: pointer;
+}
+#hoverPoint:hover{
+  opacity: 0.3;
+}
+.path{
+  stroke-width: 3px;
+  fill: none;
+}
+.comment{
+  stroke: black;
+  stroke-width: 2px;
+  opacity: 0;
+}
+.comment rect {
+  fill:rgb(22, 22, 22);
+}
+.comment text{
+  font-size: 14px;
+  stroke-width: 0.4px;
+  fill: #f8f9fa;
+  stroke: #f8f9fa;
+}
+.chartText{
+  font-size: 13px;
+}
+.chartLines{
+  stroke: black;
+  stroke-width: 1px;
+  fill: black;
+  opacity: 0.5;
+}

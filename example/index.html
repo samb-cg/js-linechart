@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>line chart example</title>
+    <link rel="stylesheet" href="../src/linechart.css">
+    <style>
+        div {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1>Single line chart</h1>
+    </div>
+    
+    <div >
+        <div>
+            <svg id="mySvg" width="600px" height="300px">
+
+            </svg>
+        </div>
+    </div>
+
+
+
+    <script type="module">
+
+        import { LineChart } from "../src/linechart.module.js";
+
+
+        // svg element
+        const svg = document.getElementById("mySvg");
+
+        // some dates
+        const dates = [newDate(20),newDate(14),newDate(6),newDate(3),newDate(0)];
+
+        // can also use date strings
+        const datesstrings = ["Thu Oct 22 2020", "Wed Oct 28 2020", "Thu Nov 05 2020", "Sun Nov 08 2020", "Wed Nov 11 2020" ];
+
+        // some data
+        const data = [44,56,32,50,67];
+
+        // blue color
+        const color = "#007bff";
+
+        // returns a date object
+        function newDate(days) {
+            let date = new Date();
+            date.setDate(date.getDate() - days);
+            return date;
+        }
+
+        // create a new chart
+        const chart = new LineChart(svg, {
+            data: {
+                labels: dates,
+                datasets: [
+                    {
+                        name: "value",
+                        data: data,
+                        linecolor: color,
+                        pointcolor: color
+                    }
+                ]
+            }
+        });
+        
+
+    </script>
+
+</body>
+</html>
