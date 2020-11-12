@@ -1,7 +1,7 @@
 # Basic javascript line chart
 
 This is very easy solution for anyone looking to use a simple line chart on their website. If you are looking for a more 
-extensive library I do recommend using something like Chart.js.
+extensive library I recommend using something like Chart.js.
 
 ## Usage
 
@@ -13,7 +13,7 @@ const chart = new LineChart(svg, {
         labels: array_with_dates,
         datasets: [
             {
-                name: foo,
+                name: "foo",
                 data: array_with_data,
                 linecolor: #007bff,
                 pointcolor: #007bff 
@@ -31,13 +31,13 @@ const chart = new LineChart(svg, {
         labels: array_with_dates,
         datasets: [
             {
-                name: foo,
+                name: "foo",
                 data: array_with_data,
                 linecolor: #007bff,
                 pointcolor: #007bff 
             },
             {
-                name: bar,
+                name: "bar",
                 data: another_array_with_data,
                 linecolor: #e60000,
                 pointcolor: #e60000 
